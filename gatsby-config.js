@@ -33,5 +33,15 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        facebookPixel: {
+          pixelId: "497061361661150",
+          cookieName: "cookie-consent",
+        },
+        environments: ["production", "development"],
+      },
+    },
   ],
 };
