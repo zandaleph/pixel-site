@@ -1,5 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import CookieConsent from "react-cookie-consent";
+import { useLocation } from "@reach/router"
+import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies'
 
 import { Header } from './Header';
 
@@ -8,6 +11,8 @@ const layoutStyle = {
 };
 
 export const Layout = ({children}) => {
+    const location = useLocation()
+
     return (
         <>
           <Helmet
@@ -26,6 +31,13 @@ export const Layout = ({children}) => {
           <div style={layoutStyle}>
             <Header />
             {children}
+            <CookieConsent
+                debug={true}
+                cookieName="cookie-consent"
+                onAccept={() => initializeAndTrack(location)}
+            >
+                This website uses cookies to enhance the user experience.
+            </CookieConsent>
           </div>
         </>
     );
