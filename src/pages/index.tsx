@@ -1,17 +1,17 @@
-import * as React from "react";
+import React from "react";
 
 import { Layout } from "../components/Layout";
 
-const pageStyles = {
+const pageStyles: React.CSSProperties = {
   color: "#232129",
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 };
-const paragraphStyles = {
+const paragraphStyles: React.CSSProperties = {
   marginBottom: 48,
 };
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
   return (
     <Layout>
       <main style={pageStyles}>

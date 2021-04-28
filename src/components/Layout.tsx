@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import { Helmet } from "react-helmet";
 import CookieConsent from "react-cookie-consent";
 import { useLocation } from "@reach/router";
@@ -6,11 +6,11 @@ import { initializeAndTrack } from "gatsby-plugin-gdpr-cookies";
 
 import { Header } from "./Header";
 
-const layoutStyle = {
+const layoutStyle: React.CSSProperties = {
   maxWidth: 650,
 };
 
-export const Layout = ({ children }) => {
+export const Layout: React.FC = ({ children }) => {
   const location = useLocation();
 
   return (
