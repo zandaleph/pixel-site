@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 import CookieConsent from "react-cookie-consent";
 import { useLocation } from "@reach/router";
@@ -11,7 +11,7 @@ const layoutStyle: React.CSSProperties = {
 };
 
 export const Layout: React.FC = ({ children }) => {
-  const location = useLocation();
+  const location = useLocation(); // eslint-disable-line @typescript-eslint/no-unsafe-assignment
 
   return (
     <>
