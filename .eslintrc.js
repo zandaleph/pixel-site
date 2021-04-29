@@ -5,6 +5,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.json"],
   },
+  ignorePatterns: ["node_modules", "build", "coverage"],
   plugins: ["@typescript-eslint"],
   extends: [
     "eslint:recommended",
