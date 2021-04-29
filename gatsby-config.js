@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Altmeta Pixel Demo",
+    siteUrl: "http://localhost",
   },
   plugins: [
     "gatsby-plugin-emotion",
