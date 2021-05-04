@@ -32,7 +32,6 @@ export const Layout: React.FC = ({ children }) => {
         <Header />
         {children}
         <CookieConsent
-          debug={true}
           cookieName="cookie-consent"
           onAccept={() => initializeAndTrack(location)}
         >
