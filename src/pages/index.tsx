@@ -1,23 +1,14 @@
 import React from "react";
 
 import { Layout } from "../components/Layout";
-import {
-  FacebookPixelProvider,
-  useFacebookPixel,
-  FbqMethod,
-} from "../components/pixel-context";
+import { useFacebookPixel, Fbq } from "../components/FacebookPixelProvider";
 
-const pageStyles: React.CSSProperties = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
 const paragraphStyles: React.CSSProperties = {
   marginBottom: 48,
 };
 
 interface TestButtonProps {
-  fbq: FbqMethod;
+  fbq: Fbq;
 }
 
 const TestButtons: React.FC<TestButtonProps> = ({ fbq }) => {
@@ -56,14 +47,9 @@ const MainContent: React.FC = () => {
 };
 
 const IndexPage: React.FC = () => {
-  console.log("Rendering IndexPage");
   return (
     <Layout>
-      <FacebookPixelProvider>
-        <main style={pageStyles}>
-          <MainContent />
-        </main>
-      </FacebookPixelProvider>
+      <MainContent />
     </Layout>
   );
 };
