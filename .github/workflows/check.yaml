@@ -1,0 +1,23 @@
+name: Check pull requests
+
+on:
+  pull_request:
+    branches:
+      - main  # Set a branch name to trigger deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install
+        run: npm ci
+
+      - name: Build and Test
+        run: npm run test
