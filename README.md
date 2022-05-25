@@ -13,6 +13,6 @@ To fork, login to your github account and then click the (fork) button in the up
 3. Go to the settings for this repository (last item on tab bar with a gear icon).  In the "Pages" settings:
     1. Set branch to gh-pages
     2. Set custom domain to your selected testing domain (e.g. pixeltest.example.com)
-    3. Ideally, tick enforce HTTPS
+    3. Ideally, tick enforce HTTPS (It takes about an hour after setting up DNS for this to become available)
 
 Now if you go to your selected testing domain it should just work!  Please let me know if there's any missing steps :)
