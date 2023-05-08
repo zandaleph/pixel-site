@@ -22,8 +22,8 @@
     "test:spelling": "cspell \"{README.md,.github/*.md,src/**/*.ts}\""
   },
   "dependencies": {
-    "@emotion/react": "11.10.6",
-    "@emotion/styled": "11.10.6",
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
     "@reach/router": "1.3.4",
